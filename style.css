@@ -1,30 +1,196 @@
+@import url(fonts.css);
+
+:root {
+    --text-color: #000000;
+    --h_nav-color: #006400;
+    --border-color: rgb(182, 182, 182);
+    --bg-color: rgb(243, 243, 243);
+  }
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+header {
+    width: 80vw;
+    margin: 0 auto;
+}
+
 header h1{
     font-size: 3rem;
-    color: darkgreen;
+    color: var(--h_nav-color);
+    font-family: Montserrat-Bold;
 }
 
-.nav {
-    background-color: darkgreen;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
+nav {
+    display: block;
+    max-width: 82vw;
+    margin: 0 auto;
+    gap: 10px;
+    background-color: var(--h_nav-color);
+    padding: 10px;
 }
 
-.nav a {
-    color: white;
-    padding-inline: 2rem;
+nav a {
     text-decoration: none;
+    padding: 5px 10px;
+    color: #fffFFF;
     font-size: 1.5rem;
-
+    background-color: var(--h_nav-color);
 }
 
 .content{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 80vw;
+    gap: 40px;
+    padding-top: 1rem;
+}
+
+.content h2 {
+    padding: 1rem;
+    background-color:var(--bg-color);
+    border-radius: 0.4rem 0.4rem 0rem 0rem ;
+    font-family: Montserrat-Light;
+    color: var(--h_nav-color); 
+}
+
+.gallery {
+    display: block;
+}
+
+.gallery img {
+    width: 100%;
+    background-color: white;
+    border-radius: 0.4rem;
+    box-shadow: 1px 1px 1px 1px  rgba(0, 0, 0, 0.2);
+    margin-bottom: 0.5rem;
+}
+
+.KarlBenz, .HenryFord {
+    display: block;
+    border-radius: 0.4rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-color);
+    font-family: Montserrat-Bold;
+ 
+}
+
+.KarlBenz img, .HenryFord img{
+    width: 93%;
+    border: 1px solid var(--border-color);
+    border-radius: 0.4rem;
+    padding: 1rem;
+    margin-inline: 1rem;
+    margin: 1rem;
+    background-color: white;
+}
+
+p, li {
+    font-size: 1.1rem;
+    background-color: white;
+    margin-inline: 1rem;
+    padding: 0 0 1.5rem 0rem;
+    line-height: 1.7rem;
+    font-family: Montserrat-Regular;
+}
+
+a {
+    text-decoration: none;
+    color: var(--h_nav-color);
+}
+
+a:hover {
+    color: #6daa6d;
+}
+
+footer{
+    min-height: 3rem;
+    text-align: center;
+    margin: 1rem;
+    font-family: Montserrat-Bold;
+    color: var(--h_nav-color);
+}
+
+.kbi, .hfi {
+    background-color: rgb(255, 255, 255);
+}
+
+.tablazat {
+    display: grid;
+    margin: auto;
+    padding-block: 1rem;
+    gap: 1rem;
+    max-width: 80vw;
+    grid-template-columns: 2fr 1fr;
+}
+
+.szoveg {
+    display: grid;
+    margin: auto;
+    padding-block: 1rem;
+    gap: 1rem;
+    max-width: 80vw;
+    grid-template-columns: 2fr 1fr;
+}
+
+li {
+    text-align: left;
+    padding-bottom: .5rem;
+  }
+  
+  table {
+    padding-bottom: 1rem;
+    width: 100%;
+    border-spacing: 0;
+    font-family: Montserrat-Regular;
+  }
+  
+  tr:nth-child(1) {
+    font-weight: 800;
+  }
+  
+  tr:nth-child(1) td {
+    border-bottom: 2px solid var(--h_nav-color);
+  }
+  
+  tr:nth-child(2), tr:nth-child(4) {
+    background-color: var(--bg-color);
+  }
+  
+  td {
+    padding: .5rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+@media screen and (max-width: 1024px) {
+
+  nav {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    }
+
+  nav a {
+   display: grid;
+  }
+
+.content, .szoveg, .tablazat {
+   grid-template-columns: 1fr;
+}
+
+header h1{
+    font-size: 2.2rem;
+}
+
+.KarlBenz img, .HenryFord img{
+    width: 88%;
+}
+
+p, li {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+}
 }
